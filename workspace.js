@@ -9,13 +9,18 @@ var TaskList = [
 var TaskName = document.getElementById("TaskName")
 var Deadline = document.getElementById("TaskDeadline")
 
-
+function addTask(TaskName, Deadline)
+{
+    TaskList.push({task: TaskName, date: new Date(Deadline)})
+    console.log("pressed");
+    console.log(TaskList);
+}
 
 TaskList.push({Task: "add a item to list", date: new Date("2022-04-15")});
 
+var sortedTasks = TaskList.slice().sort((a,b) => b.date - a.date);
 
-const sortedTasks = TaskList.slice().sort((a,b) => b.date - a.date);
-
-document.getElementById("printlist").innerHTML = JSON.stringify(TaskList, null, 4);
+//This section for desplaying an array in HTML was made by Anand(stackOverflow)
+//https://stackoverflow.com/questions/31829826/print-javascript-array-in-html
 
 console.log(sortedTasks);
