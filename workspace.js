@@ -6,8 +6,14 @@ var TaskList = [
 ]
 
 
-var TaskName = document.getElementById("TaskName")
-var Deadline = document.getElementById("TaskDeadline")
+function fill(){
+    var name = document.getElementById('TaskNameinput').value
+    var deadline = document.getElementById('TaskDeadlineinput').value
+
+    addTask(name , deadline)
+
+    display()
+}
 
 function addTask(TaskName, Deadline)
 {
