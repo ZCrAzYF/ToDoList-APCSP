@@ -1,6 +1,6 @@
 <!DOCTYPE>
 <html>
-    <script type="text/javascript" src="D:\Documents\VSC Programs\JavaScript\ToDoList-APCSP\workspace.js"> 
+    <script type="text/javascript" src="C:\Users\Ivan Sanchez\Documents\VSC Programs\JavaScript\ToDoList-APCSP\workspace.js"> 
     </script>
    <body>
        <h1>To-Do-List</h1>
@@ -15,7 +15,7 @@
     </form>
     <p></p>
     <form>
-        <input name="DeadlineInput" type = "text" id = "TaskDeadlineinput" > <summary>Task Deadline (YYYY-MM-DD)</summary>
+        <input name="DeadlineInput" type = "text" id = "TaskDeadlineinput" > <summary>Task Deadline (YYYY/MM/DD)</summary>
     </form>
 
     <p>
@@ -26,23 +26,7 @@
    <p>----------------------------</p>
    <textarea id="display" style="width:500px;height:300px" readonly></textarea>
     <script>
-        display()
-       function display() {
-        var sortedTasks = TaskList.slice().sort((b,a) => b.date - a.date);
-        
-       //This section for desplaying an array in HTML was made by Anand(stackOverflow)
-       //https://stackoverflow.com/questions/31829826/print-javascript-array-in-html
-        var parsed = "";
-       for (i = 0; i < sortedTasks.length; i++) {
-            var myobj = sortedTasks[i];
-            for (var property in myobj) {
-                parsed += property + ": " + myobj[property] + "\n";
-            }
-        }
-        document.getElementById('display').innerHTML = parsed;
-        console.log(parsed);
-    }
-
+       addTask("add a item to list","2022/04/15")
     </script>
 
 
